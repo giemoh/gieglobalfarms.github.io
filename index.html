@@ -1,82 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIE Global Farms</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GIE Global Farms</title>
+
+<style>
+body{
+margin:0;
+font-family:Segoe UI;
+background:#f4f8f4;
+}
+
+/* HEADER */
+header{
+background:linear-gradient(135deg,#0f5132,#14532d);
+text-align:center;
+padding:50px 20px;
+color:white;
+}
+
+header img{
+width:220px;
+max-width:90%;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* SECTIONS */
+section{
+padding:60px 20px;
+text-align:center;
+}
+
+h2{
+color:#14532d;
+margin-bottom:40px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card,.product{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img,.product img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+}
+
+/* ADVERT */
+.advert{
+background:linear-gradient(135deg,#0f5132,#2e7d32);
+color:white;
+padding:90px 20px;
+}
+
+.highlight{
+display:inline-block;
+background:white;
+color:#0f5132;
+padding:15px 25px;
+margin:10px;
+border-radius:8px;
+font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+background:#0f5132;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+}
+</style>
 </head>
+
 <body>
-    <!-- Hero Section -->
-    <header>
-        <h1>Welcome to GIE Global Farms</h1>
-        <p>Your trusted partner in agribusiness solutions.</p>
-    </header>
 
-    <!-- About Us -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>GIE Global Farms is committed to providing innovative agribusiness solutions. Our team of experts works tirelessly to ensure quality and efficiency in all our operations.</p>
-    </section>
+<header>
+<img src="logo.jpg">
+<h1>GIE GLOBAL FARMS</h1>
+<p>Integrated Agriculture • Sustainable Farming • Global Food Supply</p>
 
-    <!-- Core Divisions -->
-    <section id="divisions">
-        <h2>Our Core Divisions</h2>
-        <ul>
-            <li>Agriculture</li>
-            <li>Food Processing</li>
-            <li>Logistics and Supply Chain</li>
-            <li>Agricultural Technology</li>
-            <li>Research and Development</li>
-            <li>Consultancy Services</li>
-        </ul>
-    </section>
+<br>
 
-    <!-- Products Catalogue -->
-    <section id="products">
-        <h2>Products Catalogue</h2>
-        <p>Explore our range of products tailored for the agricultural industry.</p>
-    </section>
+<a href="https://wa.me/c/2349032599235">
+<button style="padding:12px 25px;background:#ffd700;border:none;border-radius:6px;font-weight:bold;">
+📘 View Catalogue
+</button>
+</a>
+</header>
 
-    <!-- Agribusiness Services -->
-    <section id="services">
-        <h2>Agribusiness Services</h2>
-        <p>We offer a variety of services, including farm management, crop advisory, and supply chain solutions.</p>
-    </section>
+<section>
+<h2>Our Agricultural Divisions</h2>
 
-    <!-- Gallery -->
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <p>Check out our latest projects and initiatives through our gallery.</p>
-    </section>
+<div class="grid">
 
-    <!-- Blog Section -->
-    <section id="blog">
-        <h2>Blog</h2>
-        <p>Stay updated with our latest news and articles on agribusiness trends.</p>
-    </section>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+<h3>🌾 Crop Production</h3>
+<p>Sustainable farming of grains, vegetables and cash crops.</p>
+</div>
 
-    <!-- Contact Form -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="submit_form.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send</button>
-        </form>
-    </section>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30">
+<h3>🐄 Livestock Farming</h3>
+<p>Professional poultry and animal production systems.</p>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 GIE Global Farms. All rights reserved.</p>
-        <p>Contact: info@gieglobalfarms.com | Phone: +123 456 7890</p>
-    </footer>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581090700227-1e8d75b1a5b1">
+<h3>🐟 Aquaculture</h3>
+<p>Commercial fish farming and modern water management.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+<h3>🌽 Agro Processing</h3>
+<p>Food packaging and agricultural product distribution.</p>
+</div>
+
+</div>
+</section>
+
+<section class="advert">
+
+<h2>🌍 Feeding the Nation, One Harvest at a Time</h2>
+
+<p style="max-width:800px;margin:auto;font-size:20px;">
+GIE Global Farms is building a complete agricultural ecosystem from production to processing and marketing.
+We deliver quality food products using modern sustainable farming systems.
+</p>
+
+<br>
+
+<div>
+<span class="highlight">🌾 Crop Systems</span>
+<span class="highlight">🐟 Aquaculture</span>
+<span class="highlight">🐄 Livestock</span>
+<span class="highlight">🌽 Agro Marketing</span>
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<p>📍 Abuja, Nigeria</p>
+<p>📞 +2349126174825</p>
+<p>📧 saeedgarbamusa@gmail.com</p>
+
+</section>
+
+<footer>
+© 2026 GIE Global Farms | Growing Agriculture for the Future
+</footer>
+
+<a href="https://wa.me/2349032599235" class="whatsapp">💬</a>
+
 </body>
 </html>
