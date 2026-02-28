@@ -3,23 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GIE Global Farms</title>
+<title>GIE Global Farms | Global Agritech Empire</title>
 
 <style>
 
-/* GLOBAL STYLE */
+/* GLOBAL */
 body{
 margin:0;
 font-family:Segoe UI, sans-serif;
 background:#f4f8f4;
+scroll-behavior:smooth;
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 nav{
 display:flex;
-justify-content:space-between;
+flex-direction:column;
 align-items:center;
-padding:15px 40px;
+padding:30px;
 background:#0f5132;
 color:white;
 position:sticky;
@@ -28,74 +29,89 @@ z-index:1000;
 }
 
 nav img{
-width:80px;
-border-radius:8px;
+width:110px;
+margin-bottom:20px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:25px;
+margin:8px 0;
+font-size:20px;
 font-weight:600;
+transition:0.4s;
 }
 
-/* HERO SECTION */
+nav a:hover{
+color:#ffd700;
+}
+
+/* HERO */
 .hero{
-background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
 url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854");
 background-size:cover;
+background-position:center;
+padding:200px 40px;
 text-align:center;
-padding:140px 20px;
 color:white;
 }
 
 .hero h1{
-font-size:60px;
+font-size:70px;
 margin:0;
 }
 
 .hero p{
-max-width:800px;
-margin:auto;
-font-size:20px;
-margin-top:20px;
+max-width:1000px;
+margin:40px auto;
+font-size:24px;
 }
 
 /* BUTTON */
 .btn{
 background:#ffd700;
-padding:15px 35px;
+padding:18px 50px;
 border:none;
-border-radius:8px;
+border-radius:12px;
+font-size:20px;
 font-weight:bold;
 cursor:pointer;
+transition:0.4s;
 }
 
-/* SECTION */
+.btn:hover{
+background:white;
+color:#0f5132;
+}
+
+/* SECTIONS */
 section{
-padding:80px 40px;
+padding:140px 60px;
 text-align:center;
 }
 
 h2{
 color:#0f5132;
-font-size:40px;
+font-size:50px;
+margin-bottom:40px;
 }
 
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-margin-top:40px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+margin-top:60px;
 }
 
+/* CARD */
 .card{
 background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 8px 25px rgba(0,0,0,0.1);
-transition:0.3s;
+padding:30px;
+border-radius:30px;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+transition:0.5s;
 }
 
 .card:hover{
@@ -104,48 +120,66 @@ transform:translateY(-10px);
 
 .card img{
 width:100%;
-height:220px;
+height:230px;
 object-fit:cover;
-border-radius:12px;
+border-radius:20px;
 }
 
 /* ADVERT */
 .advert{
-background:linear-gradient(135deg,#0f5132,#2e7d32);
+background:linear-gradient(135deg,#0f5132,#1b5e20);
 color:white;
-padding:100px 30px;
+padding:150px 40px;
 }
 
 .highlight{
 background:white;
 color:#0f5132;
-padding:15px 30px;
+padding:15px 40px;
 margin:15px;
-border-radius:10px;
 display:inline-block;
+border-radius:12px;
 font-weight:bold;
+}
+
+/* CONTACT */
+.contact-box{
+background:white;
+padding:70px;
+border-radius:40px;
+max-width:800px;
+margin:auto;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+}
+
+.social a{
+display:block;
+margin-top:10px;
+color:#0f5132;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#25D366;
+color:white;
+padding:20px;
+border-radius:50%;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
 }
 
 /* FOOTER */
 footer{
 background:#0f5132;
 color:white;
-padding:30px;
+padding:40px;
 text-align:center;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:18px;
-border-radius:50%;
-font-size:24px;
-text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 </style>
@@ -153,125 +187,105 @@ box-shadow:0 5px 15px rgba(0,0,0,0.3);
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-<img src="logo.jpg">
+<img src="logo.jpg" alt="GIE Global Farms Logo">
 
-<div>
 <a href="#">Home</a>
 <a href="#divisions">Divisions</a>
 <a href="#market">Marketplace</a>
 <a href="#contact">Contact</a>
-</div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
+<section class="hero">
 <h1>GIE GLOBAL FARMS</h1>
-
 <p>
-Integrated Agriculture Ecosystem • Sustainable Food Production • Global Agricultural Supply Network
+Global Agritech Innovation • Smart Farming Systems • Commercial Food Production • Sustainable Agricultural Excellence
 </p>
-
-<br>
-
 <a href="https://wa.me/c/2349032599235">
-<button class="btn">📘 View Catalogue</button>
+<button class="btn">Access Global Catalogue</button>
 </a>
-</div>
+</section>
 
-<!-- DIVISIONS -->
 <section id="divisions">
-<h2>Our Agricultural Ecosystem</h2>
+<h2>Our Agricultural Divisions</h2>
 
 <div class="grid">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
-<h3>🌾 Crop Production</h3>
-<p>Modern sustainable farming of grains, vegetables and commercial crops.</p>
+<h3>Intelligent Crop Production</h3>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30">
-<h3>🐄 Livestock Farming</h3>
-<p>Professional animal production and feed management systems.</p>
+<h3>Commercial Livestock Industry</h3>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1581090700227-1e8d75b1a5b1">
-<h3>🐟 Aquaculture</h3>
-<p>Advanced commercial fish production technology.</p>
+<img src="https://images.unsplash.com/photo-1598514982841-2a5a1f77b9b0">
+<h3>Advanced Aquaculture Technology</h3>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
-<h3>🌽 Agro Processing</h3>
-<p>Food packaging, storage and distribution.</p>
+<h3>Agro Processing & Export</h3>
 </div>
 
 </div>
 </section>
 
-<!-- ADVERT -->
 <section class="advert">
-
-<h2>🌍 Feeding the Nation Through Innovation</h2>
-
-<p style="max-width:900px;margin:auto;font-size:22px;">
-GIE Global Farms is building a world-class agricultural system that connects production, processing, marketing and distribution
-for sustainable food security and economic growth.
+<h2>Global Food Security Revolution</h2>
+<p style="max-width:1000px;margin:auto;font-size:24px;">
+Building a powerful agricultural ecosystem focused on innovation, sustainability and global market expansion.
 </p>
-
 <br>
-
-<span class="highlight">🌾 Advanced Crop Farming</span>
-<span class="highlight">🐟 Smart Fish Production</span>
-<span class="highlight">🐄 Commercial Livestock</span>
-<span class="highlight">🌽 Global Agro Trade</span>
-
+<span class="highlight">World Agriculture Network</span>
+<span class="highlight">Smart Farming Intelligence</span>
+<span class="highlight">Global Agro Trade</span>
 </section>
 
-<!-- MARKETPLACE -->
 <section id="market">
-<h2>Mini Marketplace</h2>
+<h2>Marketplace Preview</h2>
 
 <div class="grid">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a">
 <h3>Fresh Catfish Supply</h3>
-<p>Bulk commercial fish supply.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b">
 <h3>Organic Vegetables</h3>
-<p>Healthy farm fresh vegetables.</p>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1582515073490-dc28b9c3d66d">
+<img src="https://images.unsplash.com/photo-1589927986089-35812388d1d4">
 <h3>Poultry Products</h3>
-<p>Eggs and broiler production.</p>
 </div>
 
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-
+<div class="contact-box">
 <h2>Contact GIE Global Farms</h2>
-
 <p>📍 Abuja, Nigeria</p>
 <p>📞 +2349126174825</p>
 <p>📧 saeedgarbamusa@gmail.com</p>
 
+<div class="social">
+<h3>Follow Us</h3>
+<a href="https://facebook.com/gieglobalfarms">@gieglobalfarms (Facebook)</a>
+<a href="https://instagram.com/gieglobalfarms_">gieglobalfarms_ (Instagram)</a>
+</div>
+
+</div>
 </section>
 
 <footer>
-© 2026 GIE Global Farms | Sustainable Agriculture Ecosystem
+© 2026 GIE Global Farms | Global Agritech Empire
 </footer>
 
 <a href="https://wa.me/2349032599235" class="whatsapp">💬</a>
